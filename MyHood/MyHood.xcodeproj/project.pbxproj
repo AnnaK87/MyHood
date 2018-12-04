@@ -13,6 +13,8 @@
 		67DFF50521B6E225004EC7FD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 67DFF50421B6E225004EC7FD /* Assets.xcassets */; };
 		67DFF50821B6E225004EC7FD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 67DFF50621B6E225004EC7FD /* LaunchScreen.storyboard */; };
 		67DFF51121B6E38A004EC7FD /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67DFF51021B6E38A004EC7FD /* Post.swift */; };
+		67DFF51521B6F026004EC7FD /* PostCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67DFF51421B6F026004EC7FD /* PostCell.swift */; };
+		67DFF51721B6F64C004EC7FD /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67DFF51621B6F64C004EC7FD /* DataService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		67DFF50721B6E225004EC7FD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		67DFF50921B6E225004EC7FD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		67DFF51021B6E38A004EC7FD /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
+		67DFF51421B6F026004EC7FD /* PostCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostCell.swift; sourceTree = "<group>"; };
+		67DFF51621B6F64C004EC7FD /* DataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,7 +60,9 @@
 		67DFF4FC21B6E223004EC7FD /* MyHood */ = {
 			isa = PBXGroup;
 			children = (
+				67DFF51821B6F8A3004EC7FD /* DataService */,
 				67DFF50F21B6E377004EC7FD /* Model */,
+				67DFF51321B6F004004EC7FD /* View */,
 				67DFF51221B6E5E6004EC7FD /* Controller */,
 				67DFF4FD21B6E223004EC7FD /* AppDelegate.swift */,
 				67DFF50121B6E223004EC7FD /* Main.storyboard */,
@@ -81,6 +87,22 @@
 				67DFF4FF21B6E223004EC7FD /* ViewController.swift */,
 			);
 			path = Controller;
+			sourceTree = "<group>";
+		};
+		67DFF51321B6F004004EC7FD /* View */ = {
+			isa = PBXGroup;
+			children = (
+				67DFF51421B6F026004EC7FD /* PostCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		67DFF51821B6F8A3004EC7FD /* DataService */ = {
+			isa = PBXGroup;
+			children = (
+				67DFF51621B6F64C004EC7FD /* DataService.swift */,
+			);
+			path = DataService;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -157,6 +179,8 @@
 				67DFF51121B6E38A004EC7FD /* Post.swift in Sources */,
 				67DFF50021B6E223004EC7FD /* ViewController.swift in Sources */,
 				67DFF4FE21B6E223004EC7FD /* AppDelegate.swift in Sources */,
+				67DFF51521B6F026004EC7FD /* PostCell.swift in Sources */,
+				67DFF51721B6F64C004EC7FD /* DataService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

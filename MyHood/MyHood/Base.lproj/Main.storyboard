@@ -51,19 +51,19 @@
                                     <constraint firstItem="vCI-LE-DVD" firstAttribute="centerY" secondItem="kUJ-Uc-x7z" secondAttribute="centerY" id="w2y-Sm-UpI"/>
                                 </constraints>
                             </view>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="MIn-J7-aBj">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="MIn-J7-aBj">
                                 <rect key="frame" x="0.0" y="110" width="375" height="702"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="100" id="4YC-3x-8hL">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="PostCell" rowHeight="100" id="4YC-3x-8hL" customClass="PostCell" customModule="MyHood" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="100"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="4YC-3x-8hL" id="HIR-FG-oAU">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="99.666666666666671"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="100"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="barrel-water-bridge" translatesAutoresizingMaskIntoConstraints="NO" id="Tu0-0U-QbX">
-                                                    <rect key="frame" x="8" y="0.0" width="83" height="99.666666666666671"/>
+                                                    <rect key="frame" x="8" y="0.0" width="83" height="100"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="83" id="xIA-zO-BGi"/>
                                                     </constraints>
@@ -97,7 +97,11 @@
                                                 <constraint firstItem="WG9-B7-Oc9" firstAttribute="leading" secondItem="Tu0-0U-QbX" secondAttribute="trailing" constant="8" id="zoc-Ab-kiy"/>
                                             </constraints>
                                         </tableViewCellContentView>
-                                        <color key="backgroundColor" red="0.0" green="0.51360344366107258" blue="0.90808609323197975" alpha="0.76206656678082196" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <connections>
+                                            <outlet property="descripLbl" destination="WG9-B7-Oc9" id="XB4-c9-74S"/>
+                                            <outlet property="postImage" destination="Tu0-0U-QbX" id="OAc-a8-iVd"/>
+                                            <outlet property="titleLbl" destination="IbS-wr-r35" id="wuj-oS-rxg"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -114,6 +118,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="tableView" destination="MIn-J7-aBj" id="2Rm-er-Giu"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
