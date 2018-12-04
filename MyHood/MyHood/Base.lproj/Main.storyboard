@@ -152,6 +152,9 @@
                                         <state key="normal" title="Cancel">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
+                                        <connections>
+                                            <action selector="cancelBtnPressed:" destination="1I4-Gi-OvD" eventType="touchUpInside" id="4DO-Ml-8RS"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" red="0.0" green="0.5136034437" blue="0.9080860932" alpha="0.76206656679999996" colorSpace="custom" customColorSpace="sRGB"/>
@@ -163,8 +166,9 @@
                                     <constraint firstItem="UOh-9o-12d" firstAttribute="centerY" secondItem="0zR-0o-SuS" secondAttribute="centerY" id="vWn-mO-vOi"/>
                                 </constraints>
                             </view>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="barrel-water-bridge" translatesAutoresizingMaskIntoConstraints="NO" id="PTh-Tw-XMH">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="PTh-Tw-XMH">
                                 <rect key="frame" x="52.666666666666657" y="140" width="270" height="270"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="270" id="Jg9-Cr-bte"/>
                                     <constraint firstAttribute="height" constant="270" id="sph-2n-ucX"/>
@@ -176,6 +180,9 @@
                                 <state key="normal" title="+ Add Pic">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="addPicBtnPressed:" destination="1I4-Gi-OvD" eventType="touchUpInside" id="ZR2-au-yco"/>
+                                </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter title" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="NM1-8r-Hal">
                                 <rect key="frame" x="16" y="440" width="343" height="30"/>
@@ -205,6 +212,9 @@
                                 <state key="normal" title="Make Post">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="makePostBtnPressed:" destination="1I4-Gi-OvD" eventType="touchUpInside" id="1hf-A7-UpC"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -229,6 +239,11 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="dCO-eu-eTe"/>
                     </view>
+                    <connections>
+                        <outlet property="descripTxtField" destination="mpA-24-uHU" id="Xj7-tv-J9g"/>
+                        <outlet property="postImage" destination="PTh-Tw-XMH" id="XRy-4b-s9u"/>
+                        <outlet property="titleTxtField" destination="NM1-8r-Hal" id="ISD-Wx-fhL"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ReC-x2-0Y5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
