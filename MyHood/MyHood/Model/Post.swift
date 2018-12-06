@@ -8,11 +8,11 @@
 
 import Foundation
 
-class Post {
+class Post: NSObject, NSCoding {
     
-    private var _imagePath: String
-    private var _title: String
-    private var _postDescrip: String
+    fileprivate var _imagePath: String!
+    fileprivate var _title: String!
+    fileprivate var _postDescrip: String!
     
     var imagePath: String {
         return _imagePath
@@ -27,9 +27,31 @@ class Post {
     }
     
     
-    init(imagePath: String, title: String, postDescrip: String) {
+    
+     init(imagePath: String, title: String, postDescrip: String) {
         self._imagePath = imagePath
         self._title = title
         self._postDescrip = postDescrip
+        
     }
+
+    override init() {
+       
+    }
+    
+    
+    func encode(with aCoder: NSCoder) {
+        aCoder.encode(self._imagePath, forKey: "imagePath")
+        aCoder.encode(self._title, forKey: "title")
+        aCoder.encode(self._postDescrip, forKey: "description")
+    }
+    
+    required convenience init?(coder aDecoder: NSCoder) {
+        self.init()
+        self._imagePath = aDecoder.decodeObject(forKey: "imagePath") as? String
+        self._title = aDecoder.decodeObject(forKey: "title") as? String
+        self._postDescrip = aDecoder.decodeObject(forKey: "description") as? String
+    }
+    
+   
 }
